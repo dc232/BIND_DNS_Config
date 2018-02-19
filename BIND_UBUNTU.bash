@@ -289,12 +289,6 @@ local
 hostname
 vjcloud
 FQDN = hostname+domain = vjcloud.local
-[root@manage(~)> hostname -s
-manage
-[root@manage(~)> hostname -f
-manage.netspeedy.co.uk
-[root@manage(~)> hostname -d
-netspeedy.co.uk
 
 so in our case for this config is
 dc@vjcloud:~$ hostname -s
