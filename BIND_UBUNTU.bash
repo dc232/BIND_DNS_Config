@@ -142,8 +142,8 @@ EOF
 sleep 5
 
 DNS_FORWARDER_CONF="/etc/bind/named.conf.options"
-DNS_OUTBOUND_SERVER1="194.168.4.100"
-DNS_OUTBOUND_SERVER2="194.168.8.100"
+DNS_OUTBOUND_SERVER1="X.X.X.X"
+DNS_OUTBOUND_SERVER2="X.X.X.X"
 ROUTER_IP_FORWARDING="10.0.0.254"
 
 sed -i 's#//##g' $DNS_FORWARDER_CONF #this means subsitute the // in the script globally via /g via a literal string match (represented by the #) for nothing 
@@ -159,8 +159,8 @@ sudo named-checkconf
 cat <<EOF
 if above works current DNS nameservers for virgin are as follows
 Domain Name Server	
-194.168.4.100
-194.168.8.100
+X.X.X.X
+X.X.X.X
 Ours
 10.0.0.254
 EOF
@@ -525,8 +525,8 @@ options {
 
          forwarders {
                 //0.0.0.0;
-                194.168.4.100;
-                194.168.8.100;
+                X.X.X.X;
+                X.X.X.X;
                 10.0.0.254;
          };
          forward only;
